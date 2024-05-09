@@ -1,10 +1,17 @@
 import inquirer from 'inquirer';
+import { makeFile } from './lib/shapes.js';
 
 inquirer
     .prompt([
         {
             type: 'input',
             message: 'Enter up to three characters',
+            validate: (input) => {
+                if (input.length == 3) {
+                    return true
+                }
+                return "Please only enter 3 characters."
+            },
             name: "characters"
         },
         {
@@ -26,9 +33,14 @@ inquirer
     ])
 
     .then((answers) => {
+        answers.characters = answers.characters.toUpperCase()
+        console.log('Generating logo.svg....')
+        makeFile(answers)
     })
     .catch((error) => {
         if (error.isTtyError) {
+            console.log(error)
         } else {
+            console.log(error)
         }
     });

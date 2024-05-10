@@ -1,5 +1,5 @@
 # SVG-Generator
-##Usage
+## Usage
 - Clone this repo
 - Open in VSCode
 - Install packages
@@ -7,5 +7,5 @@
 - Fill prompts
 - Enjoy generated SVG image!
 
-##Example
+## Example
 ![image](https://github.com/Cadhig/SVG-Generator/assets/160413853/86d5febe-fb8c-457d-9e1d-d551d36cad29)
